@@ -1,39 +1,29 @@
 import turtle
 
-def draw_square():
+def draw_square(the_turtle):
+    for i in range(4):
+        the_turtle.forward(100)
+        the_turtle.right(90)
+
+
+def draw_art():
+    # Create screen
+    window = turtle.Screen()
+    window.bgcolor("white")
+
+    # Create the turtle brad
     brad = turtle.Turtle()
     brad.shape("turtle")
     brad.color("blue")
-    brad.speed(1)
+    brad.speed(2)
 
-    for i in range(4):
-        brad.forward(100)
-        brad.right(90)
+    # Draw lotus circle from squares
+    for i in range(36):
+        draw_square(brad)
+        brad.right(10)
 
-
-def draw_circle():
-    angie = turtle.Turtle()
-    angie.shape("turtle")
-    angie.color("red")
-    angie.speed(1)
-
-    angie.circle(100)
-
-
-def draw_triangle():
-    trevor = turtle.Turtle()
-    trevor.shape("turtle")
-    trevor.color("green")
-    trevor.speed(1)
-
-    for i in range(3):
-        trevor.forward(100)
-        trevor.right(120)
+    # Exit when user closes window
+    window.exitonclick()
         
     
-window = turtle.Screen()
-window.bgcolor("white")
-draw_square()
-draw_circle()
-draw_triangle()
-window.exitonclick()
+draw_art()
