@@ -10,6 +10,7 @@ def draw_square():
         brad.forward(100)
         brad.right(90)
 
+
 def draw_circle():
     angie = turtle.Turtle()
     angie.shape("turtle")
@@ -18,9 +19,21 @@ def draw_circle():
 
     angie.circle(100)
 
+
+def draw_triangle():
+    trevor = turtle.Turtle()
+    trevor.shape("turtle")
+    trevor.color("green")
+    trevor.speed(1)
+
+    for i in range(3):
+        trevor.forward(100)
+        trevor.right(120)
+        
     
 window = turtle.Screen()
 window.bgcolor("white")
 draw_square()
 draw_circle()
+draw_triangle()
 window.exitonclick()
